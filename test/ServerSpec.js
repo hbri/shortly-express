@@ -2,7 +2,6 @@ var expect = require('chai').expect;
 var mysql = require('mysql');
 var request = require('request');
 var httpMocks = require('node-mocks-http');
-
 var app = require('../server/app.js');
 var schema = require('../server/db/config.js');
 var port = 4568;
@@ -123,7 +122,7 @@ describe('', function() {
     });
   });
 
-  xdescribe('Account Creation:', function() {
+  describe('Account Creation:', function() {
 
     it('signup creates a new user record', function(done) {
       var options = {
@@ -325,7 +324,7 @@ describe('', function() {
     });
   });
 
-  xdescribe('Express Middleware', function() {
+  describe('Express Middleware', function() {
     var cookieParser = require('../server/middleware/cookieParser.js');
     var createSession = require('../server/middleware/auth.js').createSession;
 
